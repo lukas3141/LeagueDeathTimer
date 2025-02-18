@@ -7,19 +7,39 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C3B9D25D2CD8012300BF00D7 /* lol_death_timerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B9D25C2CD8012300BF00D7 /* lol_death_timerApp.swift */; };
-		C3B9D25F2CD8012300BF00D7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B9D25E2CD8012300BF00D7 /* ContentView.swift */; };
+		C381E0F12D5FBD9800BC5F93 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = C381E0F02D5FBD9800BC5F93 /* Settings.swift */; };
+		C381E0F42D5FC76D00BC5F93 /* LaunchAtLogin in Frameworks */ = {isa = PBXBuildFile; productRef = C381E0F32D5FC76D00BC5F93 /* LaunchAtLogin */; };
+		C381E0F62D5FFDA200BC5F93 /* wallpaper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C381E0F52D5FFD9E00BC5F93 /* wallpaper.swift */; };
+		C381E0F82D60309E00BC5F93 /* screenpositions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C381E0F72D60309600BC5F93 /* screenpositions.swift */; };
+		C3B9D25D2CD8012300BF00D7 /* LeagueDeathTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B9D25C2CD8012300BF00D7 /* LeagueDeathTimer.swift */; };
+		C3B9D25F2CD8012300BF00D7 /* DeathTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B9D25E2CD8012300BF00D7 /* DeathTimer.swift */; };
 		C3B9D2612CD8012600BF00D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3B9D2602CD8012600BF00D7 /* Assets.xcassets */; };
 		C3B9D2642CD8012600BF00D7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3B9D2632CD8012600BF00D7 /* Preview Assets.xcassets */; };
+		C3B9D26E2CD803EF00BF00D7 /* BeaufortforLOL-Heavy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C3B9D26D2CD803EA00BF00D7 /* BeaufortforLOL-Heavy.ttf */; };
+		C3B9D26F2CD803EF00BF00D7 /* BeaufortforLOL-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C3B9D26C2CD803EA00BF00D7 /* BeaufortforLOL-Bold.ttf */; };
+		C3B9D2722CD811B200BF00D7 /* livegamedata.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B9D2712CD811B200BF00D7 /* livegamedata.swift */; };
+		C3B9D2752CD83BCE00BF00D7 /* urlsessiondelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B9D2742CD83BCE00BF00D7 /* urlsessiondelegate.swift */; };
+		C3DAA5122CD95CC20093BFCC /* gameclientutil.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3DAA5112CD95CC20093BFCC /* gameclientutil.swift */; };
+		C3DAA5142CD973290093BFCC /* datadragon.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3DAA5132CD973290093BFCC /* datadragon.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		C3B9D2592CD8012300BF00D7 /* lol-death-timer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "lol-death-timer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		C3B9D25C2CD8012300BF00D7 /* lol_death_timerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lol_death_timerApp.swift; sourceTree = "<group>"; };
-		C3B9D25E2CD8012300BF00D7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		C381E0F02D5FBD9800BC5F93 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		C381E0F52D5FFD9E00BC5F93 /* wallpaper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wallpaper.swift; sourceTree = "<group>"; };
+		C381E0F72D60309600BC5F93 /* screenpositions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = screenpositions.swift; sourceTree = "<group>"; };
+		C3B9D2592CD8012300BF00D7 /* LeagueDeathTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LeagueDeathTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C3B9D25C2CD8012300BF00D7 /* LeagueDeathTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeagueDeathTimer.swift; sourceTree = "<group>"; };
+		C3B9D25E2CD8012300BF00D7 /* DeathTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeathTimer.swift; sourceTree = "<group>"; };
 		C3B9D2602CD8012600BF00D7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C3B9D2632CD8012600BF00D7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		C3B9D2652CD8012600BF00D7 /* lol_death_timer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = lol_death_timer.entitlements; sourceTree = "<group>"; };
+		C3B9D2652CD8012600BF00D7 /* LeagueDeathTimer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LeagueDeathTimer.entitlements; sourceTree = "<group>"; };
+		C3B9D26C2CD803EA00BF00D7 /* BeaufortforLOL-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BeaufortforLOL-Bold.ttf"; sourceTree = "<group>"; };
+		C3B9D26D2CD803EA00BF00D7 /* BeaufortforLOL-Heavy.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BeaufortforLOL-Heavy.ttf"; sourceTree = "<group>"; };
+		C3B9D2702CD8042200BF00D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		C3B9D2712CD811B200BF00D7 /* livegamedata.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = livegamedata.swift; sourceTree = "<group>"; };
+		C3B9D2742CD83BCE00BF00D7 /* urlsessiondelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = urlsessiondelegate.swift; sourceTree = "<group>"; };
+		C3DAA5112CD95CC20093BFCC /* gameclientutil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gameclientutil.swift; sourceTree = "<group>"; };
+		C3DAA5132CD973290093BFCC /* datadragon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = datadragon.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C381E0F42D5FC76D00BC5F93 /* LaunchAtLogin in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -36,7 +57,7 @@
 		C3B9D2502CD8012300BF00D7 = {
 			isa = PBXGroup;
 			children = (
-				C3B9D25B2CD8012300BF00D7 /* lol-death-timer */,
+				C3B9D25B2CD8012300BF00D7 /* LeagueDeathTimer */,
 				C3B9D25A2CD8012300BF00D7 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -44,21 +65,25 @@
 		C3B9D25A2CD8012300BF00D7 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C3B9D2592CD8012300BF00D7 /* lol-death-timer.app */,
+				C3B9D2592CD8012300BF00D7 /* LeagueDeathTimer.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		C3B9D25B2CD8012300BF00D7 /* lol-death-timer */ = {
+		C3B9D25B2CD8012300BF00D7 /* LeagueDeathTimer */ = {
 			isa = PBXGroup;
 			children = (
-				C3B9D25C2CD8012300BF00D7 /* lol_death_timerApp.swift */,
-				C3B9D25E2CD8012300BF00D7 /* ContentView.swift */,
+				C3B9D2702CD8042200BF00D7 /* Info.plist */,
+				C3B9D26B2CD803E300BF00D7 /* fonts */,
+				C3B9D25C2CD8012300BF00D7 /* LeagueDeathTimer.swift */,
+				C3B9D25E2CD8012300BF00D7 /* DeathTimer.swift */,
+				C381E0F02D5FBD9800BC5F93 /* Settings.swift */,
+				C3B9D2732CD811B500BF00D7 /* api */,
 				C3B9D2602CD8012600BF00D7 /* Assets.xcassets */,
-				C3B9D2652CD8012600BF00D7 /* lol_death_timer.entitlements */,
+				C3B9D2652CD8012600BF00D7 /* LeagueDeathTimer.entitlements */,
 				C3B9D2622CD8012600BF00D7 /* Preview Content */,
 			);
-			path = "lol-death-timer";
+			path = LeagueDeathTimer;
 			sourceTree = "<group>";
 		};
 		C3B9D2622CD8012600BF00D7 /* Preview Content */ = {
@@ -69,12 +94,34 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		C3B9D26B2CD803E300BF00D7 /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				C3B9D26C2CD803EA00BF00D7 /* BeaufortforLOL-Bold.ttf */,
+				C3B9D26D2CD803EA00BF00D7 /* BeaufortforLOL-Heavy.ttf */,
+			);
+			path = fonts;
+			sourceTree = "<group>";
+		};
+		C3B9D2732CD811B500BF00D7 /* api */ = {
+			isa = PBXGroup;
+			children = (
+				C381E0F72D60309600BC5F93 /* screenpositions.swift */,
+				C381E0F52D5FFD9E00BC5F93 /* wallpaper.swift */,
+				C3B9D2712CD811B200BF00D7 /* livegamedata.swift */,
+				C3B9D2742CD83BCE00BF00D7 /* urlsessiondelegate.swift */,
+				C3DAA5112CD95CC20093BFCC /* gameclientutil.swift */,
+				C3DAA5132CD973290093BFCC /* datadragon.swift */,
+			);
+			path = api;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		C3B9D2582CD8012300BF00D7 /* lol-death-timer */ = {
+		C3B9D2582CD8012300BF00D7 /* LeagueDeathTimer */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C3B9D2682CD8012600BF00D7 /* Build configuration list for PBXNativeTarget "lol-death-timer" */;
+			buildConfigurationList = C3B9D2682CD8012600BF00D7 /* Build configuration list for PBXNativeTarget "LeagueDeathTimer" */;
 			buildPhases = (
 				C3B9D2552CD8012300BF00D7 /* Sources */,
 				C3B9D2562CD8012300BF00D7 /* Frameworks */,
@@ -84,9 +131,9 @@
 			);
 			dependencies = (
 			);
-			name = "lol-death-timer";
+			name = LeagueDeathTimer;
 			productName = "lol-death-timer";
-			productReference = C3B9D2592CD8012300BF00D7 /* lol-death-timer.app */;
+			productReference = C3B9D2592CD8012300BF00D7 /* LeagueDeathTimer.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -104,7 +151,7 @@
 					};
 				};
 			};
-			buildConfigurationList = C3B9D2542CD8012300BF00D7 /* Build configuration list for PBXProject "lol-death-timer" */;
+			buildConfigurationList = C3B9D2542CD8012300BF00D7 /* Build configuration list for PBXProject "LeagueDeathTimer" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -113,11 +160,14 @@
 				Base,
 			);
 			mainGroup = C3B9D2502CD8012300BF00D7;
+			packageReferences = (
+				C381E0F22D5FC76D00BC5F93 /* XCRemoteSwiftPackageReference "LaunchAtLogin-Modern" */,
+			);
 			productRefGroup = C3B9D25A2CD8012300BF00D7 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				C3B9D2582CD8012300BF00D7 /* lol-death-timer */,
+				C3B9D2582CD8012300BF00D7 /* LeagueDeathTimer */,
 			);
 		};
 /* End PBXProject section */
@@ -127,8 +177,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3B9D26E2CD803EF00BF00D7 /* BeaufortforLOL-Heavy.ttf in Resources */,
 				C3B9D2642CD8012600BF00D7 /* Preview Assets.xcassets in Resources */,
 				C3B9D2612CD8012600BF00D7 /* Assets.xcassets in Resources */,
+				C3B9D26F2CD803EF00BF00D7 /* BeaufortforLOL-Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,8 +191,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C3B9D25F2CD8012300BF00D7 /* ContentView.swift in Sources */,
-				C3B9D25D2CD8012300BF00D7 /* lol_death_timerApp.swift in Sources */,
+				C3B9D25F2CD8012300BF00D7 /* DeathTimer.swift in Sources */,
+				C3B9D2752CD83BCE00BF00D7 /* urlsessiondelegate.swift in Sources */,
+				C381E0F82D60309E00BC5F93 /* screenpositions.swift in Sources */,
+				C381E0F62D5FFDA200BC5F93 /* wallpaper.swift in Sources */,
+				C3DAA5142CD973290093BFCC /* datadragon.swift in Sources */,
+				C3B9D25D2CD8012300BF00D7 /* LeagueDeathTimer.swift in Sources */,
+				C381E0F12D5FBD9800BC5F93 /* Settings.swift in Sources */,
+				C3B9D2722CD811B200BF00D7 /* livegamedata.swift in Sources */,
+				C3DAA5122CD95CC20093BFCC /* gameclientutil.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,20 +329,24 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = "lol-death-timer/lol_death_timer.entitlements";
+				CODE_SIGN_ENTITLEMENTS = LeagueDeathTimer/LeagueDeathTimer.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"lol-death-timer/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"LeagueDeathTimer/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LeagueDeathTimer/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "League Death Timer";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "codes.cr.lol-death-timer";
+				PRODUCT_BUNDLE_IDENTIFIER = "codes.cr.league-death-timer";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -295,20 +358,24 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = "lol-death-timer/lol_death_timer.entitlements";
+				CODE_SIGN_ENTITLEMENTS = LeagueDeathTimer/LeagueDeathTimer.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"lol-death-timer/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"LeagueDeathTimer/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LeagueDeathTimer/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "League Death Timer";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "codes.cr.lol-death-timer";
+				PRODUCT_BUNDLE_IDENTIFIER = "codes.cr.league-death-timer";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -318,7 +385,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		C3B9D2542CD8012300BF00D7 /* Build configuration list for PBXProject "lol-death-timer" */ = {
+		C3B9D2542CD8012300BF00D7 /* Build configuration list for PBXProject "LeagueDeathTimer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C3B9D2662CD8012600BF00D7 /* Debug */,
@@ -327,7 +394,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C3B9D2682CD8012600BF00D7 /* Build configuration list for PBXNativeTarget "lol-death-timer" */ = {
+		C3B9D2682CD8012600BF00D7 /* Build configuration list for PBXNativeTarget "LeagueDeathTimer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C3B9D2692CD8012600BF00D7 /* Debug */,
@@ -337,6 +404,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C381E0F22D5FC76D00BC5F93 /* XCRemoteSwiftPackageReference "LaunchAtLogin-Modern" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sindresorhus/LaunchAtLogin-Modern";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C381E0F32D5FC76D00BC5F93 /* LaunchAtLogin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C381E0F22D5FC76D00BC5F93 /* XCRemoteSwiftPackageReference "LaunchAtLogin-Modern" */;
+			productName = LaunchAtLogin;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C3B9D2512CD8012300BF00D7 /* Project object */;
 }
