@@ -11,6 +11,8 @@ You can easiliy access the application in the menu status bar.
 - macOS 12+ (macOS Monterey or higher)
 - Xcode (If you want it to compile it yourself)
 - League of Legends (Might be obvious)
+> [!NOTE]  
+> You might need to right-click open the app in order to trust it
 
 ## 🍩 Credits
 - Font: [Beaufort for LOL](https://brand.riotgames.com/de-de/league-of-legends/typography/)
