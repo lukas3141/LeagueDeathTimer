@@ -19,8 +19,9 @@
 		C3B9D26F2CD803EF00BF00D7 /* BeaufortforLOL-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C3B9D26C2CD803EA00BF00D7 /* BeaufortforLOL-Bold.ttf */; };
 		C3B9D2722CD811B200BF00D7 /* livegamedata.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B9D2712CD811B200BF00D7 /* livegamedata.swift */; };
 		C3B9D2752CD83BCE00BF00D7 /* urlsessiondelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B9D2742CD83BCE00BF00D7 /* urlsessiondelegate.swift */; };
-		C3DAA5122CD95CC20093BFCC /* gameclientutil.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3DAA5112CD95CC20093BFCC /* gameclientutil.swift */; };
+		C3DAA5122CD95CC20093BFCC /* gameutil.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3DAA5112CD95CC20093BFCC /* gameutil.swift */; };
 		C3DAA5142CD973290093BFCC /* datadragon.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3DAA5132CD973290093BFCC /* datadragon.swift */; };
+		C3FD56772D6AA6A900C1FBCE /* lcu.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FD56762D6AA6A700C1FBCE /* lcu.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,8 +39,9 @@
 		C3B9D2702CD8042200BF00D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		C3B9D2712CD811B200BF00D7 /* livegamedata.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = livegamedata.swift; sourceTree = "<group>"; };
 		C3B9D2742CD83BCE00BF00D7 /* urlsessiondelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = urlsessiondelegate.swift; sourceTree = "<group>"; };
-		C3DAA5112CD95CC20093BFCC /* gameclientutil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gameclientutil.swift; sourceTree = "<group>"; };
+		C3DAA5112CD95CC20093BFCC /* gameutil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gameutil.swift; sourceTree = "<group>"; };
 		C3DAA5132CD973290093BFCC /* datadragon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = datadragon.swift; sourceTree = "<group>"; };
+		C3FD56762D6AA6A700C1FBCE /* lcu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lcu.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,11 +108,12 @@
 		C3B9D2732CD811B500BF00D7 /* api */ = {
 			isa = PBXGroup;
 			children = (
+				C3FD56762D6AA6A700C1FBCE /* lcu.swift */,
 				C381E0F72D60309600BC5F93 /* screenpositions.swift */,
 				C381E0F52D5FFD9E00BC5F93 /* wallpaper.swift */,
 				C3B9D2712CD811B200BF00D7 /* livegamedata.swift */,
 				C3B9D2742CD83BCE00BF00D7 /* urlsessiondelegate.swift */,
-				C3DAA5112CD95CC20093BFCC /* gameclientutil.swift */,
+				C3DAA5112CD95CC20093BFCC /* gameutil.swift */,
 				C3DAA5132CD973290093BFCC /* datadragon.swift */,
 			);
 			path = api;
@@ -197,9 +200,10 @@
 				C381E0F62D5FFDA200BC5F93 /* wallpaper.swift in Sources */,
 				C3DAA5142CD973290093BFCC /* datadragon.swift in Sources */,
 				C3B9D25D2CD8012300BF00D7 /* LeagueDeathTimer.swift in Sources */,
+				C3FD56772D6AA6A900C1FBCE /* lcu.swift in Sources */,
 				C381E0F12D5FBD9800BC5F93 /* Settings.swift in Sources */,
 				C3B9D2722CD811B200BF00D7 /* livegamedata.swift in Sources */,
-				C3DAA5122CD95CC20093BFCC /* gameclientutil.swift in Sources */,
+				C3DAA5122CD95CC20093BFCC /* gameutil.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -345,7 +349,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 12;
+				MACOSX_DEPLOYMENT_TARGET = 13;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "codes.cr.league-death-timer";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -375,7 +379,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 12;
+				MACOSX_DEPLOYMENT_TARGET = 13;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "codes.cr.league-death-timer";
 				PRODUCT_NAME = "$(TARGET_NAME)";

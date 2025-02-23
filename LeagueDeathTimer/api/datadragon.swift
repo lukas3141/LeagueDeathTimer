@@ -20,7 +20,7 @@ func getNewestVersion() async -> String? {
 }
 
 func getChampionSplashURL(championName: String) async -> URL? {
-    let reqURL = URL(string: "https://ddragon.leagueoflegends.com/cdn/14.21.1/data/en_US/champion.json")!
+    let reqURL = URL(string: "https://ddragon.leagueoflegends.com/cdn/14.21.1/data/\(AppDelegate.leagueLocale)/champion.json")!
     let request = URLRequest(url: reqURL)
     guard let (data, _) = try? await URLSession.shared.data(for: request),
           let dict = try? JSONSerialization.jsonObject(with: data) as? [String: Any],
