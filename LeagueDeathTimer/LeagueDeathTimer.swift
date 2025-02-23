@@ -22,7 +22,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     static var gameClientBundleID = "com.riotgames.LeagueofLegends.GameClient"
 
     func applicationDidFinishLaunching(_ notification: Notification) {
-        NSApp.setActivationPolicy(.prohibited)
+        NSApp.setActivationPolicy(.accessory)
 
         statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.squareLength)
         if let button = statusItem?.button {
