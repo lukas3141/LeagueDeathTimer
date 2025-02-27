@@ -7,7 +7,7 @@
 //
 
 import Foundation
-        
+
 struct LCUCredentials {
     let port: Int
     let password: String
@@ -18,7 +18,7 @@ func fetchLCUCredentials(mainAppPackagePath: URL) -> LCUCredentials? {
     lockfileUrl = mainAppPackagePath.appending(path: "Contents/LoL/lockfile")
     // Check if lockfile exists
     if !FileManager.default.fileExists(atPath: lockfileUrl.path) { return nil }
-    
+
     // Read lockfile contents
     if let content = try? String(contentsOfFile: lockfileUrl.path) {
         let credsRgx = /^\w+:\d+:(\d+):([^:]+):\w+$/
@@ -28,17 +28,17 @@ func fetchLCUCredentials(mainAppPackagePath: URL) -> LCUCredentials? {
             return LCUCredentials(port: Int(port)!, password: String(password))
         }
     }
-    
+
     return nil
 }
 
 func getLCUBaseUrl(from creds: LCUCredentials) -> URL {
-    return URL(string: "https://127.0.0.1:\(creds.port)")!
+    URL(string: "https://127.0.0.1:\(creds.port)")!
 }
 
 func getClientLocale(lcuCreds: LCUCredentials) async -> String? {
     let requestUrl = getLCUBaseUrl(from: lcuCreds).appendingPathComponent("/riotclient/region-locale")
-    if let response = await makeUnsecureRequest(url: requestUrl, headers: ["Authorization" : generateAuthHeaderVal(creds: lcuCreds)]) as? [String : String] {
+    if let response = await makeUnsecureRequest(url: requestUrl, headers: ["Authorization": generateAuthHeaderVal(creds: lcuCreds)]) as? [String: String] {
         return response["locale"]
     }
     return nil

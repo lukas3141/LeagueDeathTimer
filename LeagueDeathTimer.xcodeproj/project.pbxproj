@@ -8,14 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		C3762BE12D643625004C90EA /* LaunchAtLogin in Frameworks */ = {isa = PBXBuildFile; productRef = C3762BE02D643625004C90EA /* LaunchAtLogin */; };
-		C381E0F12D5FBD9800BC5F93 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = C381E0F02D5FBD9800BC5F93 /* Settings.swift */; };
 		C381E0F62D5FFDA200BC5F93 /* wallpaper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C381E0F52D5FFD9E00BC5F93 /* wallpaper.swift */; };
 		C381E0F82D60309E00BC5F93 /* screenpositions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C381E0F72D60309600BC5F93 /* screenpositions.swift */; };
 		C3B9D25D2CD8012300BF00D7 /* LeagueDeathTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B9D25C2CD8012300BF00D7 /* LeagueDeathTimer.swift */; };
 		C3B9D25F2CD8012300BF00D7 /* DeathTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B9D25E2CD8012300BF00D7 /* DeathTimer.swift */; };
 		C3B9D2612CD8012600BF00D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3B9D2602CD8012600BF00D7 /* Assets.xcassets */; };
 		C3B9D2642CD8012600BF00D7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3B9D2632CD8012600BF00D7 /* Preview Assets.xcassets */; };
-		C3B9D26E2CD803EF00BF00D7 /* BeaufortforLOL-Heavy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C3B9D26D2CD803EA00BF00D7 /* BeaufortforLOL-Heavy.ttf */; };
 		C3B9D26F2CD803EF00BF00D7 /* BeaufortforLOL-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C3B9D26C2CD803EA00BF00D7 /* BeaufortforLOL-Bold.ttf */; };
 		C3B9D2722CD811B200BF00D7 /* livegamedata.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B9D2712CD811B200BF00D7 /* livegamedata.swift */; };
 		C3B9D2752CD83BCE00BF00D7 /* urlsessiondelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B9D2742CD83BCE00BF00D7 /* urlsessiondelegate.swift */; };
@@ -25,7 +23,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		C381E0F02D5FBD9800BC5F93 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		C381E0F52D5FFD9E00BC5F93 /* wallpaper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wallpaper.swift; sourceTree = "<group>"; };
 		C381E0F72D60309600BC5F93 /* screenpositions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = screenpositions.swift; sourceTree = "<group>"; };
 		C3B9D2592CD8012300BF00D7 /* LeagueDeathTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LeagueDeathTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -35,7 +32,6 @@
 		C3B9D2632CD8012600BF00D7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C3B9D2652CD8012600BF00D7 /* LeagueDeathTimer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LeagueDeathTimer.entitlements; sourceTree = "<group>"; };
 		C3B9D26C2CD803EA00BF00D7 /* BeaufortforLOL-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BeaufortforLOL-Bold.ttf"; sourceTree = "<group>"; };
-		C3B9D26D2CD803EA00BF00D7 /* BeaufortforLOL-Heavy.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BeaufortforLOL-Heavy.ttf"; sourceTree = "<group>"; };
 		C3B9D2702CD8042200BF00D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		C3B9D2712CD811B200BF00D7 /* livegamedata.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = livegamedata.swift; sourceTree = "<group>"; };
 		C3B9D2742CD83BCE00BF00D7 /* urlsessiondelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = urlsessiondelegate.swift; sourceTree = "<group>"; };
@@ -79,7 +75,6 @@
 				C3B9D26B2CD803E300BF00D7 /* fonts */,
 				C3B9D25C2CD8012300BF00D7 /* LeagueDeathTimer.swift */,
 				C3B9D25E2CD8012300BF00D7 /* DeathTimer.swift */,
-				C381E0F02D5FBD9800BC5F93 /* Settings.swift */,
 				C3B9D2732CD811B500BF00D7 /* api */,
 				C3B9D2602CD8012600BF00D7 /* Assets.xcassets */,
 				C3B9D2652CD8012600BF00D7 /* LeagueDeathTimer.entitlements */,
@@ -100,7 +95,6 @@
 			isa = PBXGroup;
 			children = (
 				C3B9D26C2CD803EA00BF00D7 /* BeaufortforLOL-Bold.ttf */,
-				C3B9D26D2CD803EA00BF00D7 /* BeaufortforLOL-Heavy.ttf */,
 			);
 			path = fonts;
 			sourceTree = "<group>";
@@ -180,7 +174,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C3B9D26E2CD803EF00BF00D7 /* BeaufortforLOL-Heavy.ttf in Resources */,
 				C3B9D2642CD8012600BF00D7 /* Preview Assets.xcassets in Resources */,
 				C3B9D2612CD8012600BF00D7 /* Assets.xcassets in Resources */,
 				C3B9D26F2CD803EF00BF00D7 /* BeaufortforLOL-Bold.ttf in Resources */,
@@ -201,7 +194,6 @@
 				C3DAA5142CD973290093BFCC /* datadragon.swift in Sources */,
 				C3B9D25D2CD8012300BF00D7 /* LeagueDeathTimer.swift in Sources */,
 				C3FD56772D6AA6A900C1FBCE /* lcu.swift in Sources */,
-				C381E0F12D5FBD9800BC5F93 /* Settings.swift in Sources */,
 				C3B9D2722CD811B200BF00D7 /* livegamedata.swift in Sources */,
 				C3DAA5122CD95CC20093BFCC /* gameutil.swift in Sources */,
 			);

@@ -6,16 +6,16 @@
 // Copyright © 2024 Tohr01. All rights reserved.
 //
 
+import Cocoa
 import LaunchAtLogin
 import SwiftUI
-import Cocoa
 
 var appDelegate = AppDelegate()
 
 class AppDelegate: NSObject, NSApplicationDelegate {
     // Window containing DeathTimer view
     private var deathtimerwindow: NSWindow?
-    
+
     // Status item displayed in top bar
     private var statusItem: NSStatusItem?
 
@@ -23,21 +23,31 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     private var leagueAppPath: String?
     static var gameClientBundleID = "com.riotgames.LeagueofLegends.GameClient"
     static var leagueClientUxBundleID = "com.riotgames.LeagueofLegends.LeagueClientUx"
-    
+
     func applicationDidFinishLaunching(_ notification: Notification) {
+        for fontFamily in NSFontManager.shared.availableFontFamilies {
+            print("Font family: \(fontFamily)")
+            if let fonts = NSFontManager.shared.availableMembers(ofFontFamily: fontFamily) {
+                for font in fonts {
+                    let fontName = font[0] as! String
+                    print("- Font name: \(fontName)")
+                }
+            }
+            print("\n")
+        }
         NSApp.setActivationPolicy(.accessory)
         leagueAppPath = UserDefaults.standard.value(forKey: "leagueAppPath") as? String
-        
+
         let leagueCustomPathPlaceholderText = "Override this with the path to your League of Legends app"
         let defaultLeagueAppPath = "/Applications/League of Legends.app"
-        
+
         if leagueAppPath == nil {
             UserDefaults.standard.setValue(leagueCustomPathPlaceholderText, forKey: "leagueAppPath")
             leagueAppPath = defaultLeagueAppPath
         } else if let leagueAppPathStr = leagueAppPath, leagueAppPathStr == leagueCustomPathPlaceholderText {
             leagueAppPath = defaultLeagueAppPath
         }
-        
+
         statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.squareLength)
         if let button = statusItem?.button {
             button.image = NSImage(named: "menubaricon")
@@ -90,7 +100,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         if gameClientRunning() {
             waitForGameClientReady()
         }
-        
+
         if leagueUxRunning() {
             waitForLCUApi()
         }
@@ -107,12 +117,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             }
         }
     }
-    
+
     func waitForLCUApi() {
         // Wait for LCU api to become available
         Task {
             while true {
-                if let lcuCreds = fetchLCUCredentials(mainAppPackagePath: URL(string: leagueAppPath!)!), let locale = await getClientLocale(lcuCreds: lcuCreds)  {
+                if let lcuCreds = fetchLCUCredentials(mainAppPackagePath: URL(string: leagueAppPath!)!), let locale = await getClientLocale(lcuCreds: lcuCreds) {
                     AppDelegate.leagueLocale = locale
                     break
                 }
@@ -120,7 +130,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             }
         }
     }
-    
+
     @objc private func toggleLaunchAtLogin() {
         if let launchAtLoginItem = statusItem?.menu?.item(withTag: 1) {
             LaunchAtLogin.isEnabled.toggle()
@@ -156,7 +166,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             UserDefaults.standard.set(winOrigin.x, forKey: "winOriginX")
             UserDefaults.standard.set(winOrigin.y, forKey: "winOriginY")
         }
-        
+
         deathtimerwindow?.close()
         deathtimerwindow = nil
     }

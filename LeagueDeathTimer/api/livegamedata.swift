@@ -16,7 +16,7 @@ func getActivePlayerChampionName(riotID: String) async -> String? {
 }
 
 func getActivePlayerRiotID() async -> String? {
-    guard let dict = await makeUnsecureRequest(url: URL(string:"https://127.0.0.1:2999/liveclientdata/activeplayer")!) as? [String: Any],
+    guard let dict = await makeUnsecureRequest(url: URL(string: "https://127.0.0.1:2999/liveclientdata/activeplayer")!) as? [String: Any],
           let riotID = dict["riotId"] as? String
     else {
         return nil

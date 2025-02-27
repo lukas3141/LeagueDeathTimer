@@ -9,13 +9,13 @@
 import Cocoa
 
 func gameClientRunning() -> Bool {
-    return appRunning(with: AppDelegate.gameClientBundleID)
+    appRunning(with: AppDelegate.gameClientBundleID)
 }
 
 func leagueUxRunning() -> Bool {
-    return appRunning(with: AppDelegate.leagueClientUxBundleID)
+    appRunning(with: AppDelegate.leagueClientUxBundleID)
 }
 
-fileprivate func appRunning(with bundleID: String) -> Bool {
-    return !NSRunningApplication.runningApplications(withBundleIdentifier: bundleID).isEmpty
+private func appRunning(with bundleID: String) -> Bool {
+    !NSRunningApplication.runningApplications(withBundleIdentifier: bundleID).isEmpty
 }

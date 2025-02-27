@@ -14,9 +14,9 @@ class CertIgnoreURLSessionDelegate: NSObject, URLSessionDelegate {
     }
 }
 
-func makeUnsecureRequest(url: URL, headers: [String:String] = [:]) async -> Any? {
+func makeUnsecureRequest(url: URL, headers: [String: String] = [:]) async -> Any? {
     var urlRequest = URLRequest(url: url)
-    
+
     for (key, val) in headers {
         urlRequest.addValue(val, forHTTPHeaderField: key)
     }

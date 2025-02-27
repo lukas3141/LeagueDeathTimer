@@ -8,5 +8,5 @@
 import Cocoa
 
 func getWallpaperUrl() -> URL? {
-    return NSWorkspace.shared.desktopImageURL(for: NSScreen.main!)
+    NSWorkspace.shared.desktopImageURL(for: NSScreen.main!)
 }
