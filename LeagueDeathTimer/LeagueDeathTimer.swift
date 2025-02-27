@@ -25,16 +25,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     static var leagueClientUxBundleID = "com.riotgames.LeagueofLegends.LeagueClientUx"
 
     func applicationDidFinishLaunching(_ notification: Notification) {
-        for fontFamily in NSFontManager.shared.availableFontFamilies {
-            print("Font family: \(fontFamily)")
-            if let fonts = NSFontManager.shared.availableMembers(ofFontFamily: fontFamily) {
-                for font in fonts {
-                    let fontName = font[0] as! String
-                    print("- Font name: \(fontName)")
-                }
-            }
-            print("\n")
-        }
         NSApp.setActivationPolicy(.accessory)
         leagueAppPath = UserDefaults.standard.value(forKey: "leagueAppPath") as? String
 

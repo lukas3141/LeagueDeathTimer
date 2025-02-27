@@ -14,8 +14,7 @@ struct LCUCredentials {
 }
 
 func fetchLCUCredentials(mainAppPackagePath: URL) -> LCUCredentials? {
-    var lockfileUrl: URL
-    lockfileUrl = mainAppPackagePath.appending(path: "Contents/LoL/lockfile")
+    var lockfileUrl = mainAppPackagePath.appending(path: "Contents/LoL/lockfile")
     // Check if lockfile exists
     if !FileManager.default.fileExists(atPath: lockfileUrl.path) { return nil }
 
@@ -32,7 +31,7 @@ func fetchLCUCredentials(mainAppPackagePath: URL) -> LCUCredentials? {
     return nil
 }
 
-func getLCUBaseUrl(from creds: LCUCredentials) -> URL {
+fileprivate func getLCUBaseUrl(from creds: LCUCredentials) -> URL {
     URL(string: "https://127.0.0.1:\(creds.port)")!
 }
 
@@ -44,7 +43,7 @@ func getClientLocale(lcuCreds: LCUCredentials) async -> String? {
     return nil
 }
 
-func generateAuthHeaderVal(creds: LCUCredentials) -> String {
+fileprivate func generateAuthHeaderVal(creds: LCUCredentials) -> String {
     let concatenatedUsernamePass = "riot:\(creds.password)"
     let b64encAuth = concatenatedUsernamePass.data(using: .utf8)!.base64EncodedString()
     return "Basic \(b64encAuth)"
