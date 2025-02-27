@@ -14,7 +14,7 @@ struct LCUCredentials {
 }
 
 func fetchLCUCredentials(mainAppPackagePath: URL) -> LCUCredentials? {
-    var lockfileUrl = mainAppPackagePath.appending(path: "Contents/LoL/lockfile")
+    let lockfileUrl = mainAppPackagePath.appending(path: "Contents/LoL/lockfile")
     // Check if lockfile exists
     if !FileManager.default.fileExists(atPath: lockfileUrl.path) { return nil }
 
