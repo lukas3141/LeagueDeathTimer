@@ -8,7 +8,7 @@ You can easiliy access the application in the menu status bar.
 ![screenshot_screen](https://github.com/user-attachments/assets/d7b356d2-2997-4e1a-ad27-0a0a2e1b6ed7)
 
 ## 🎯 Requirements
-- macOS 12+ (macOS Monterey or higher)
+- macOS 13+ (macOS Monterey or higher)
 - Xcode (If you want it to compile it yourself)
 - League of Legends (Might be obvious)
 > [!NOTE]  
