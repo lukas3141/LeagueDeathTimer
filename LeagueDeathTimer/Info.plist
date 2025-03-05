@@ -6,8 +6,10 @@
 	<true/>
 	<key>UIAppFonts</key>
 	<array>
-		<string>fonts/BeaufortforLOL-Bold.ttf</string>
-		<string>fonts/BeaufortforLOL-Heavy.ttf</string>
+		<string>BeaufortforLOL-Bold.ttf</string>
+		<string>BeaufortforLOL-Heavy.ttf</string>
 	</array>
+	<key>ATSApplicationFontsPath</key>
+	<string>.</string>
 </dict>
 </plist>

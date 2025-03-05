@@ -19,10 +19,24 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     // Status item displayed in top bar
     private var statusItem: NSStatusItem?
 
+    static var leagueLocale: String = "en_GB"
+    private var leagueAppPath: String?
     static var gameClientBundleID = "com.riotgames.LeagueofLegends.GameClient"
+    static var leagueClientUxBundleID = "com.riotgames.LeagueofLegends.LeagueClientUx"
 
     func applicationDidFinishLaunching(_ notification: Notification) {
-        NSApp.setActivationPolicy(.prohibited)
+        NSApp.setActivationPolicy(.accessory)
+        leagueAppPath = UserDefaults.standard.value(forKey: "leagueAppPath") as? String
+
+        let leagueCustomPathPlaceholderText = "Override this with the path to your League of Legends app"
+        let defaultLeagueAppPath = "/Applications/League of Legends.app"
+
+        if leagueAppPath == nil {
+            UserDefaults.standard.setValue(leagueCustomPathPlaceholderText, forKey: "leagueAppPath")
+            leagueAppPath = defaultLeagueAppPath
+        } else if let leagueAppPathStr = leagueAppPath, leagueAppPathStr == leagueCustomPathPlaceholderText {
+            leagueAppPath = defaultLeagueAppPath
+        }
 
         statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.squareLength)
         if let button = statusItem?.button {
@@ -56,9 +70,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         let notificationCenter = NSWorkspace.shared.notificationCenter
         // Add listener that fires when gameclient has been launched
         notificationCenter.addObserver(forName: NSWorkspace.didLaunchApplicationNotification, object: nil, queue: OperationQueue.main) { notification in
-            if let app = notification.userInfo?[NSWorkspace.applicationUserInfoKey] as? NSRunningApplication, app.bundleIdentifier == AppDelegate.gameClientBundleID {
-                // League gameclient has been started
-                self.waitForGameClientReady()
+            if let app = notification.userInfo?[NSWorkspace.applicationUserInfoKey] as? NSRunningApplication {
+                if app.bundleIdentifier == AppDelegate.gameClientBundleID {
+                    // League gameclient has been started
+                    self.waitForGameClientReady()
+                } else if app.bundleIdentifier == AppDelegate.leagueClientUxBundleID {
+                    self.waitForLCUApi()
+                }
             }
         }
 
@@ -72,9 +90,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         if gameClientRunning() {
             waitForGameClientReady()
         }
+
+        if leagueUxRunning() {
+            waitForLCUApi()
+        }
     }
 
-    private func waitForGameClientReady() {
+    func waitForGameClientReady() {
         // Wait for api to return information
         Task {
             while await getActivePlayerRiotID() == nil {
@@ -82,6 +104,19 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             }
             DispatchQueue.main.sync {
                 self.openMainWindow()
+            }
+        }
+    }
+
+    func waitForLCUApi() {
+        // Wait for LCU api to become available
+        Task {
+            while true {
+                if let lcuCreds = fetchLCUCredentials(mainAppPackagePath: URL(string: leagueAppPath!)!), let locale = await getClientLocale(lcuCreds: lcuCreds) {
+                    AppDelegate.leagueLocale = locale
+                    break
+                }
+                try? await Task.sleep(nanoseconds: 1_000_000_000)
             }
         }
     }
@@ -102,18 +137,16 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         let contentView = DeathTimer()
 
         deathtimerwindow = NSWindow(contentRect: NSRect(x: 0, y: 0, width: 517, height: 138), styleMask: [], backing: .buffered, defer: false)
-        guard let deathtimerwindow else { return }
-        deathtimerwindow.isMovableByWindowBackground = true
-        deathtimerwindow.isReleasedWhenClosed = false
-        deathtimerwindow.center()
-        deathtimerwindow.setIsVisible(false)
-        deathtimerwindow.makeKeyAndOrderFront(nil)
-        deathtimerwindow.contentView = NSHostingView(rootView: contentView)
-        deathtimerwindow.level = NSWindow.Level.screenSaver
+        deathtimerwindow?.isMovableByWindowBackground = true
+        deathtimerwindow?.isReleasedWhenClosed = false
+        deathtimerwindow?.center()
+        deathtimerwindow?.setIsVisible(false)
+        deathtimerwindow?.makeKeyAndOrderFront(nil)
+        deathtimerwindow?.contentView = NSHostingView(rootView: contentView)
+        deathtimerwindow?.level = NSWindow.Level.screenSaver
         if let winOriginX = UserDefaults.standard.value(forKey: "winOriginX") as? CGFloat, let winOriginY = UserDefaults.standard.value(forKey: "winOriginY") as? CGFloat {
-            print(winOriginX, winOriginY)
             let frameOrigin = CGPoint(x: winOriginX, y: winOriginY)
-            deathtimerwindow.setFrameOrigin(frameOrigin)
+            deathtimerwindow?.setFrameOrigin(frameOrigin)
         }
     }
 

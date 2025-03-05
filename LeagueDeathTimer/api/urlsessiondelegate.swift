@@ -13,3 +13,17 @@ class CertIgnoreURLSessionDelegate: NSObject, URLSessionDelegate {
         completionHandler(.useCredential, URLCredential(trust: challenge.protectionSpace.serverTrust!))
     }
 }
+
+func makeUnsecureRequest(url: URL, headers: [String: String] = [:]) async -> Any? {
+    var urlRequest = URLRequest(url: url)
+
+    for (key, val) in headers {
+        urlRequest.addValue(val, forHTTPHeaderField: key)
+    }
+    guard let (data, _) = try? await URLSession(configuration: .default, delegate: CertIgnoreURLSessionDelegate(), delegateQueue: .main).data(for: urlRequest),
+          let e = try? JSONSerialization.jsonObject(with: data)
+    else {
+        return nil
+    }
+    return e
+}
